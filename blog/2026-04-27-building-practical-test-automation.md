@@ -1,9 +1,12 @@
 ---
-layout: post
 title: Building Practical Test Automation Without Over-Engineering
-excerpt: A practical framework for building automation that supports delivery speed and confidence.
+description: A practical framework for building automation that supports delivery speed and confidence.
+slug: building-practical-test-automation
 ---
+
 High-impact automation is less about perfect architecture and more about clear outcomes.
+
+<!-- truncate -->
 
 Focus on these fundamentals first:
 

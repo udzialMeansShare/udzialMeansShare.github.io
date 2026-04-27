@@ -1,9 +1,12 @@
 ---
-layout: post
 title: Quality Strategy for Fast-Moving Engineering Teams
-excerpt: A lightweight approach to quality strategy that scales with product speed.
+description: A lightweight approach to quality strategy that scales with product speed.
+slug: quality-strategy-for-fast-teams
 ---
+
 Modern teams move quickly, but quality still needs structure.
+
+<!-- truncate -->
 
 A practical strategy can be built around three layers:
 

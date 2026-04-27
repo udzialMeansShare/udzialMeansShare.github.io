@@ -1,0 +1,105 @@
+export const profile = {
+  name: "Gaurav Khurana",
+  role: "Senior Test Consultant at Microsoft",
+  tagline:
+    "Senior Test Consultant at Microsoft building practical automation systems, resilient test strategy, and community-led learning.",
+  about: [
+    "Senior Test Consultant at Microsoft with more than 15 years of experience shaping automation strategy, quality engineering practices, and stakeholder-facing delivery.",
+    "Known for combining framework design, risk analysis, and mentoring into programs that help teams ship with confidence instead of treating testing as a late-stage checkpoint.",
+    "Also active in blogs, YouTube, and coaching sessions that make practical test automation more approachable for working engineers."
+  ],
+  highlights: [
+    {
+      value: "15+",
+      label: "Years in testing and automation"
+    },
+    {
+      value: "2022",
+      label: "Tester of the Year award"
+    },
+    {
+      value: "Multi",
+      label: "Hackathon wins and community talks"
+    }
+  ],
+  links: [
+    {
+      label: "Personal Website",
+      href: "https://gauravkhurana.com"
+    },
+    {
+      label: "LinkedIn",
+      href: "https://www.linkedin.com/in/gauravkhuraana"
+    },
+    {
+      label: "Book a Session",
+      href: "https://topmate.io/gauravkhurana"
+    }
+  ],
+  experience: [
+    {
+      company: "Microsoft",
+      role: "Senior Test Consultant",
+      period: "2023 - Present",
+      points: [
+        "Framework creation using Playwright and .NET for scalable UI automation.",
+        "Automation strategy design and testing-as-a-service support across teams.",
+        "Risk analysis, stakeholder alignment, and pragmatic quality planning."
+      ]
+    },
+    {
+      company: "SSP Limited",
+      role: "Senior Test Engineer",
+      period: "Previous role",
+      points: [
+        "Delivered automation using Selenium and SOAPUI across enterprise testing flows.",
+        "Owned test planning, execution, and defect visibility for delivery teams.",
+        "Led testing efforts and supported cross-functional coordination."
+      ]
+    },
+    {
+      company: "Netcracker",
+      role: "System Analyst - QA",
+      period: "Earlier role",
+      points: [
+        "Created and executed structured test cases for telecom-focused systems.",
+        "Built automation using Perl-based ITF workflows.",
+        "Handled regression coverage and production support scenarios."
+      ]
+    }
+  ],
+  skills: [
+    "Playwright",
+    "Selenium",
+    "C#",
+    "API Testing",
+    "Azure DevOps",
+    "Automation Architecture",
+    "Python",
+    "Risk Analysis",
+    "Quality Strategy"
+  ],
+  contact: [
+    {
+      label: "Email",
+      title: "Direct Contact",
+      body: "For consulting, speaking, or collaboration enquiries.",
+      href: "mailto:gaurav.jaz@gmail.com",
+      text: "gaurav.jaz@gmail.com"
+    },
+    {
+      label: "Blog",
+      title: "Articles and Writing",
+      body: "Thoughts on testing, automation, and hands-on engineering practice.",
+      href: "https://www.udzial.com",
+      text: "udzial.com"
+    },
+    {
+      label: "Mentoring",
+      title: "Book a Session",
+      body: "One-to-one conversations on careers, automation, and testing strategy.",
+      href: "https://topmate.io/gauravkhurana",
+      text: "topmate.io/gauravkhurana"
+    }
+  ]
+};
