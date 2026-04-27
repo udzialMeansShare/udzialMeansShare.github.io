@@ -1,150 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Gaurav Khurana | Tester @ Microsoft</title>
-
-<style>
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    line-height: 1.6;
-    background: #f5f7fa;
-    color: #333;
-}
-
-header {
-    background: #0a66c2;
-    color: white;
-    padding: 40px 20px;
-    text-align: center;
-}
-
-section {
-    padding: 40px 20px;
-    max-width: 1000px;
-    margin: auto;
-}
-
-h2 {
-    color: #0a66c2;
-}
-
-.card {
-    background: white;
-    padding: 20px;
-    margin: 15px 0;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-
-.skills span {
-    display: inline-block;
-    background: #0a66c2;
-    color: white;
-    padding: 6px 12px;
-    margin: 5px;
-    border-radius: 20px;
-    font-size: 14px;
-}
-
-footer {
-    text-align: center;
-    padding: 20px;
-    background: #222;
-    color: white;
-}
-a {
-    color: #0a66c2;
-    text-decoration: none;
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio website for Gaurav Khurana, Senior Test Consultant at Microsoft focused on automation, quality strategy, and community mentoring.">
+    <title>Gaurav Khurana | Test Automation Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
 <body>
+    <div class="page-shell">
+        <header class="hero">
+            <div class="hero__backdrop"></div>
+            <div class="hero__content">
+                <p class="eyebrow">Quality Engineering Portfolio</p>
+                <h1>Gaurav Khurana</h1>
+                <p class="hero__lede">Senior Test Consultant at Microsoft building practical automation systems, resilient test strategy, and community-led learning.</p>
+                <div class="hero__actions" id="hero-links"></div>
+                <dl class="hero__stats" id="highlights"></dl>
+            </div>
+        </header>
 
-<header>
-    <h1>Gaurav Khurana</h1>
-    <p>Tester @ Microsoft | Automation Expert | YouTuber</p>
-    <p>
-        <a href="https://gauravkhurana.com" target="_blank">Website</a> |
-        <a href="https://www.linkedin.com/in/gauravkhuraana" target="_blank">LinkedIn</a>
-    </p>
-</header>
+        <main>
+            <section class="section section--intro">
+                <div class="section__heading">
+                    <p class="section__label">About</p>
+                    <h2>Focused on turning quality into a visible engineering advantage.</h2>
+                </div>
+                <div class="card card--feature" id="about"></div>
+            </section>
 
-<section>
-    <h2>About Me</h2>
-    <div class="card">
-        <p>
-            Senior Test Consultant at Microsoft with 15+ years of experience in testing and automation.
-            Awarded <b>Tester of the Year 2022</b> and winner of multiple hackathons.
-        </p>
-        <p>
-            Passionate about sharing knowledge through blogs, YouTube, and mentoring.
-        </p>
+            <section class="section section--split">
+                <div>
+                    <div class="section__heading">
+                        <p class="section__label">Experience</p>
+                        <h2>Selected roles and delivery areas.</h2>
+                    </div>
+                    <div class="timeline" id="experience-list"></div>
+                </div>
+
+                <aside>
+                    <div class="section__heading">
+                        <p class="section__label">Skills</p>
+                        <h2>Tools and domains used in production.</h2>
+                    </div>
+                    <div class="card">
+                        <div class="skills-grid" id="skills-list"></div>
+                    </div>
+                </aside>
+            </section>
+
+            <section class="section">
+                <div class="section__heading">
+                    <p class="section__label">Contact</p>
+                    <h2>Ways to connect, collaborate, or book time.</h2>
+                </div>
+                <div class="contact-grid" id="contact-list"></div>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <p>&copy; 2026 Gaurav Khurana</p>
+        </footer>
     </div>
-</section>
 
-<section>
-    <h2>Experience</h2>
-
-    <div class="card">
-        <h3>Microsoft</h3>
-        <p><b>Senior Test Consultant (2023 - Present)</b></p>
-        <ul>
-            <li>Framework creation using Playwright (.NET)</li>
-            <li>Automation strategy and testing as a service</li>
-            <li>Risk analysis and stakeholder collaboration</li>
-        </ul>
-    </div>
-
-    <div class="card">
-        <h3>SSP Limited</h3>
-        <p><b>Senior Test Engineer</b></p>
-        <ul>
-            <li>Automation using Selenium & SOAPUI</li>
-            <li>Test planning and execution</li>
-            <li>Led testing team</li>
-        </ul>
-    </div>
-
-    <div class="card">
-        <h3>Netcracker</h3>
-        <p><b>System Analyst - QA</b></p>
-        <ul>
-            <li>Test case design and execution</li>
-            <li>Automation using Perl (ITF)</li>
-            <li>Regression and production support</li>
-        </ul>
-    </div>
-</section>
-
-<section>
-    <h2>Skills</h2>
-    <div class="skills">
-        <span>Playwright</span>
-        <span>Selenium</span>
-        <span>C#</span>
-        <span>API Testing</span>
-        <span>Azure DevOps</span>
-        <span>Automation</span>
-        <span>Python</span>
-    </div>
-</section>
-
-<section>
-    <h2>Contact</h2>
-    <div class="card">
-        <p>Email: gaurav.jaz@gmail.com</p>
-        <p>Blog: <a href="https://www.udzial.com">udzial.com</a></p>
-        <p>Topmate: <a href="https://topmate.io/gauravkhurana">Book a session</a></p>
-    </div>
-</section>
-
-<footer>
-    <p>© 2026 Gaurav Khurana</p>
-</footer>
-
+    <script type="module" src="assets/js/main.js"></script>
 </body>
 </html>
