@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+    <channel>
+        <title>Gaurav Khurana Blog</title>
+        <link>https://udzialmeansshare.github.io/blog</link>
+        <description>Gaurav Khurana Blog</description>
+        <lastBuildDate>Mon, 27 Apr 2026 00:00:00 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>https://github.com/jpmonette/feed</generator>
+        <language>en</language>
+        <item>
+            <title><![CDATA[Building Practical Test Automation Without Over-Engineering]]></title>
+            <link>https://udzialmeansshare.github.io/blog/building-practical-test-automation</link>
+            <guid>https://udzialmeansshare.github.io/blog/building-practical-test-automation</guid>
+            <pubDate>Mon, 27 Apr 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[A practical framework for building automation that supports delivery speed and confidence.]]></description>
+            <content:encoded><![CDATA[<p>High-impact automation is less about perfect architecture and more about clear outcomes.</p>
+<p>Focus on these fundamentals first:</p>
+<ol>
+<li class="">Align tests to business risk, not only UI paths.</li>
+<li class="">Keep failure diagnostics readable for developers.</li>
+<li class="">Treat flaky tests as production defects.</li>
+<li class="">Review test value every sprint.</li>
+</ol>
+<p>When teams prioritize reliability and feedback speed, automation becomes a delivery accelerator instead of a maintenance burden.</p>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Quality Strategy for Fast-Moving Engineering Teams]]></title>
+            <link>https://udzialmeansshare.github.io/blog/quality-strategy-for-fast-teams</link>
+            <guid>https://udzialmeansshare.github.io/blog/quality-strategy-for-fast-teams</guid>
+            <pubDate>Mon, 27 Apr 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[A lightweight approach to quality strategy that scales with product speed.]]></description>
+            <content:encoded><![CDATA[<p>Modern teams move quickly, but quality still needs structure.</p>
+<p>A practical strategy can be built around three layers:</p>
+<ol>
+<li class="">Prevention: coding standards, pair reviews, and contract checks.</li>
+<li class="">Detection: focused automated test suites and observability.</li>
+<li class="">Recovery: fast triage, clear ownership, and rollback readiness.</li>
+</ol>
+<p>This model keeps quality work visible, measurable, and connected to real release outcomes.</p>]]></content:encoded>
+        </item>
+    </channel>
+</rss>

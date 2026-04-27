@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://udzialmeansshare.github.io/blog</id>
+    <title>Gaurav Khurana Blog</title>
+    <updated>2026-04-27T00:00:00.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://udzialmeansshare.github.io/blog"/>
+    <subtitle>Gaurav Khurana Blog</subtitle>
+    <entry>
+        <title type="html"><![CDATA[Building Practical Test Automation Without Over-Engineering]]></title>
+        <id>https://udzialmeansshare.github.io/blog/building-practical-test-automation</id>
+        <link href="https://udzialmeansshare.github.io/blog/building-practical-test-automation"/>
+        <updated>2026-04-27T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[A practical framework for building automation that supports delivery speed and confidence.]]></summary>
+        <content type="html"><![CDATA[<p>High-impact automation is less about perfect architecture and more about clear outcomes.</p>
+<p>Focus on these fundamentals first:</p>
+<ol>
+<li class="">Align tests to business risk, not only UI paths.</li>
+<li class="">Keep failure diagnostics readable for developers.</li>
+<li class="">Treat flaky tests as production defects.</li>
+<li class="">Review test value every sprint.</li>
+</ol>
+<p>When teams prioritize reliability and feedback speed, automation becomes a delivery accelerator instead of a maintenance burden.</p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Quality Strategy for Fast-Moving Engineering Teams]]></title>
+        <id>https://udzialmeansshare.github.io/blog/quality-strategy-for-fast-teams</id>
+        <link href="https://udzialmeansshare.github.io/blog/quality-strategy-for-fast-teams"/>
+        <updated>2026-04-27T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[A lightweight approach to quality strategy that scales with product speed.]]></summary>
+        <content type="html"><![CDATA[<p>Modern teams move quickly, but quality still needs structure.</p>
+<p>A practical strategy can be built around three layers:</p>
+<ol>
+<li class="">Prevention: coding standards, pair reviews, and contract checks.</li>
+<li class="">Detection: focused automated test suites and observability.</li>
+<li class="">Recovery: fast triage, clear ownership, and rollback readiness.</li>
+</ol>
+<p>This model keeps quality work visible, measurable, and connected to real release outcomes.</p>]]></content>
+    </entry>
+</feed>

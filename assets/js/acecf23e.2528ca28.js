@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkudzialmeansshare_site=self.webpackChunkudzialmeansshare_site||[]).push([[903],{1912:s=>{s.exports=JSON.parse('{"blogBasePath":"/blog","blogTitle":"Latest Articles","authorsListPath":"/blog/authors"}')}}]);
