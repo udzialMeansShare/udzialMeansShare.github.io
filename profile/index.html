@@ -1,0 +1,57 @@
+---
+layout: default
+title: Profile
+description: Professional tester profile, experience, skills, and contact details for Gaurav Khurana.
+---
+{% assign profile = site.data.profile %}
+<main class="page-main page-main--narrow">
+    <section class="section section--intro">
+        <div class="section__heading">
+            <p class="section__label">Tester Profile</p>
+            <h1>{{ profile.name }}</h1>
+            <p>{{ profile.role }}</p>
+        </div>
+        <div class="card card--feature">
+            {% for paragraph in profile.about %}
+            <p>{{ paragraph }}</p>
+            {% endfor %}
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="section__heading">
+            <p class="section__label">Experience</p>
+            <h2>Career Snapshot</h2>
+        </div>
+        <div class="timeline">
+            {% for role in profile.experience %}
+            <article class="timeline__item">
+                <div class="timeline__body">
+                    <p class="timeline__period">{{ role.period }}</p>
+                    <h3 class="timeline__title">{{ role.role }}</h3>
+                    <p class="timeline__company">{{ role.company }}</p>
+                    <ul class="timeline__list">
+                        {% for point in role.points %}
+                        <li>{{ point }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </article>
+            {% endfor %}
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="section__heading">
+            <p class="section__label">Skills</p>
+            <h2>Tools and Strength Areas</h2>
+        </div>
+        <div class="card">
+            <div class="skills-grid">
+                {% for skill in profile.skills %}
+                <span class="skill-chip">{{ skill }}</span>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+</main>

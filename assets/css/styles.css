@@ -40,6 +40,48 @@ a {
     min-height: 100vh;
 }
 
+.site-nav-wrap {
+    padding: 16px 20px 0;
+}
+
+.site-nav {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 14px 18px;
+    border-radius: 999px;
+    border: 1px solid var(--border);
+    background: rgba(255, 255, 255, 0.72);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 8px 24px rgba(34, 38, 48, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+}
+
+.site-brand {
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.site-nav__links {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.site-nav__links a {
+    text-decoration: none;
+    color: var(--muted);
+    font-weight: 700;
+}
+
+.site-nav__links a:hover,
+.site-nav__links a:focus-visible {
+    color: var(--accent-strong);
+}
+
 .hero {
     position: relative;
     overflow: hidden;
@@ -175,6 +217,10 @@ main {
     padding: 12px 20px 80px;
 }
 
+.page-main--narrow {
+    max-width: 920px;
+}
+
 .section {
     margin-top: 34px;
 }
@@ -299,6 +345,84 @@ main {
     gap: 18px;
 }
 
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 16px;
+}
+
+.blog-list {
+    display: grid;
+    gap: 16px;
+}
+
+.blog-card h3,
+.blog-list__item h2 {
+    margin: 8px 0;
+    font-family: "Space Grotesk", sans-serif;
+}
+
+.blog-card h3 a,
+.blog-list__item h2 a {
+    text-decoration: none;
+}
+
+.blog-card__link {
+    color: var(--accent-strong);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.blog-card__link:hover,
+.blog-card__link:focus-visible,
+.blog-card h3 a:hover,
+.blog-card h3 a:focus-visible,
+.blog-list__item h2 a:hover,
+.blog-list__item h2 a:focus-visible {
+    text-decoration: underline;
+}
+
+.section-action {
+    margin: 18px 0 0;
+}
+
+.button-link--solid {
+    border-color: transparent;
+    background: var(--accent-strong);
+}
+
+.button-link--solid:hover,
+.button-link--solid:focus-visible {
+    background: #08473b;
+}
+
+.post-meta {
+    margin: 0;
+    color: var(--muted);
+}
+
+.post-content {
+    display: grid;
+    gap: 16px;
+}
+
+.prose h2,
+.prose h3,
+.prose h4 {
+    font-family: "Space Grotesk", sans-serif;
+}
+
+.prose p,
+.prose li {
+    line-height: 1.7;
+    color: var(--muted);
+}
+
+.prose ul,
+.prose ol {
+    padding-left: 20px;
+}
+
 .contact-card {
     padding: 24px;
 }
@@ -365,6 +489,12 @@ main {
         grid-template-columns: 1fr;
     }
 
+    .site-nav {
+        border-radius: 24px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
     .hero__backdrop {
         inset: 14px;
     }
@@ -375,6 +505,11 @@ main {
 }
 
 @media (max-width: 560px) {
+    .site-nav-wrap {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
     .hero {
         padding: 22px 12px 20px;
     }

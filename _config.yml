@@ -1,0 +1,18 @@
+title: Gaurav Khurana
+email: gaurav.jaz@gmail.com
+description: Senior Test Consultant at Microsoft focused on automation, quality strategy, and practical engineering leadership.
+baseurl: ""
+url: ""
+permalink: /blog/:title/
+markdown: kramdown
+plugins:
+  - jekyll-feed
+kramdown:
+  input: GFM
+collections:
+  pages:
+    output: true
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock

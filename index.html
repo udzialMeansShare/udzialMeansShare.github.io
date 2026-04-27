@@ -1,72 +1,116 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio website for Gaurav Khurana, Senior Test Consultant at Microsoft focused on automation, quality strategy, and community mentoring.">
-    <title>Gaurav Khurana | Test Automation Portfolio</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/styles.css">
-</head>
+---
+layout: default
+title: Home
+description: Portfolio and blog for Gaurav Khurana, Senior Test Consultant at Microsoft.
+---
+{% assign profile = site.data.profile %}
 
-<body>
-    <div class="page-shell">
-        <header class="hero">
-            <div class="hero__backdrop"></div>
-            <div class="hero__content">
-                <p class="eyebrow">Quality Engineering Portfolio</p>
-                <h1>Gaurav Khurana</h1>
-                <p class="hero__lede">Senior Test Consultant at Microsoft building practical automation systems, resilient test strategy, and community-led learning.</p>
-                <div class="hero__actions" id="hero-links"></div>
-                <dl class="hero__stats" id="highlights"></dl>
+<header class="hero">
+    <div class="hero__backdrop"></div>
+    <div class="hero__content">
+        <p class="eyebrow">Quality Engineering Portfolio</p>
+        <h1>{{ profile.name }}</h1>
+        <p class="hero__lede">{{ profile.tagline }}</p>
+        <div class="hero__actions">
+            {% for link in profile.links %}
+            <a class="button-link" href="{{ link.href }}" target="_blank" rel="noreferrer">{{ link.label }}</a>
+            {% endfor %}
+        </div>
+        <dl class="hero__stats">
+            {% for item in profile.highlights %}
+            <div>
+                <dt>{{ item.value }}</dt>
+                <dd>{{ item.label }}</dd>
             </div>
-        </header>
-
-        <main>
-            <section class="section section--intro">
-                <div class="section__heading">
-                    <p class="section__label">About</p>
-                    <h2>Focused on turning quality into a visible engineering advantage.</h2>
-                </div>
-                <div class="card card--feature" id="about"></div>
-            </section>
-
-            <section class="section section--split">
-                <div>
-                    <div class="section__heading">
-                        <p class="section__label">Experience</p>
-                        <h2>Selected roles and delivery areas.</h2>
-                    </div>
-                    <div class="timeline" id="experience-list"></div>
-                </div>
-
-                <aside>
-                    <div class="section__heading">
-                        <p class="section__label">Skills</p>
-                        <h2>Tools and domains used in production.</h2>
-                    </div>
-                    <div class="card">
-                        <div class="skills-grid" id="skills-list"></div>
-                    </div>
-                </aside>
-            </section>
-
-            <section class="section">
-                <div class="section__heading">
-                    <p class="section__label">Contact</p>
-                    <h2>Ways to connect, collaborate, or book time.</h2>
-                </div>
-                <div class="contact-grid" id="contact-list"></div>
-            </section>
-        </main>
-
-        <footer class="site-footer">
-            <p>&copy; 2026 Gaurav Khurana</p>
-        </footer>
+            {% endfor %}
+        </dl>
     </div>
+</header>
 
-    <script type="module" src="assets/js/main.js"></script>
-</body>
-</html>
+<main class="page-main">
+    <section class="section section--intro">
+        <div class="section__heading">
+            <p class="section__label">About</p>
+            <h2>Focused on turning quality into a visible engineering advantage.</h2>
+        </div>
+        <div class="card card--feature">
+            {% for paragraph in profile.about %}
+            <p>{{ paragraph }}</p>
+            {% endfor %}
+        </div>
+    </section>
+
+    <section class="section section--split">
+        <div>
+            <div class="section__heading">
+                <p class="section__label">Experience</p>
+                <h2>Selected roles and delivery areas.</h2>
+            </div>
+            <div class="timeline">
+                {% for role in profile.experience %}
+                <article class="timeline__item">
+                    <div class="timeline__body">
+                        <p class="timeline__period">{{ role.period }}</p>
+                        <h3 class="timeline__title">{{ role.role }}</h3>
+                        <p class="timeline__company">{{ role.company }}</p>
+                        <ul class="timeline__list">
+                            {% for point in role.points %}
+                            <li>{{ point }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </article>
+                {% endfor %}
+            </div>
+        </div>
+
+        <aside>
+            <div class="section__heading">
+                <p class="section__label">Skills</p>
+                <h2>Tools and domains used in production.</h2>
+            </div>
+            <div class="card">
+                <div class="skills-grid">
+                    {% for skill in profile.skills %}
+                    <span class="skill-chip">{{ skill }}</span>
+                    {% endfor %}
+                </div>
+            </div>
+        </aside>
+    </section>
+
+    <section class="section">
+        <div class="section__heading">
+            <p class="section__label">Latest Writing</p>
+            <h2>Thoughts on testing, automation, and quality engineering.</h2>
+        </div>
+        <div class="blog-grid">
+            {% for post in site.posts limit: 3 %}
+            <article class="card blog-card">
+                <p class="timeline__period">{{ post.date | date: "%b %d, %Y" }}</p>
+                <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+                <p>{{ post.excerpt | strip_html | truncate: 150 }}</p>
+                <p><a class="blog-card__link" href="{{ post.url | relative_url }}">Read article</a></p>
+            </article>
+            {% endfor %}
+        </div>
+        <p class="section-action"><a class="button-link button-link--solid" href="{{ '/blog/' | relative_url }}">View all posts</a></p>
+    </section>
+
+    <section class="section">
+        <div class="section__heading">
+            <p class="section__label">Contact</p>
+            <h2>Ways to connect, collaborate, or book time.</h2>
+        </div>
+        <div class="contact-grid">
+            {% for item in profile.contact %}
+            <article class="contact-card">
+                <span class="contact-card__label">{{ item.label }}</span>
+                <h3>{{ item.title }}</h3>
+                <p>{{ item.body }}</p>
+                <p><a href="{{ item.href }}" target="_blank" rel="noreferrer">{{ item.text }}</a></p>
+            </article>
+            {% endfor %}
+        </div>
+    </section>
+</main>
