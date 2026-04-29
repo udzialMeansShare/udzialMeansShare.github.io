@@ -2,14 +2,14 @@
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Gaurav Khurana',
-  tagline: 'Senior Test Consultant at Microsoft focused on automation and quality strategy.',
+  title: 'Sharing is Caring',
+  tagline: 'Testing, automation, and quality engineering notes by Gaurav Khurana.',
   url: 'https://udzialmeansshare.github.io',
   baseUrl: '/',
   organizationName: 'udzialMeansShare',
   projectName: 'udzialMeansShare.github.io',
   trailingSlash: false,
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
   markdown: {
     hooks: {
       onBrokenMarkdownLinks: 'warn'
@@ -23,7 +23,10 @@ const config = {
     [
       'classic',
       {
-        docs: false,
+        docs: {
+          sidebarPath: require.resolve('./sidebars.js'),
+          routeBasePath: '/'
+        },
         blog: {
           showReadingTime: true,
           blogTitle: 'Latest Articles',
@@ -37,17 +40,47 @@ const config = {
     ]
   ],
   themeConfig: {
+    colorMode: {
+      defaultMode: 'light',
+      respectPrefersColorScheme: true
+    },
     navbar: {
-      title: 'Gaurav Khurana',
+      title: 'Sharing is Caring',
       items: [
-        {to: '/', label: 'Home', position: 'left'},
+        {
+          type: 'docSidebar',
+          sidebarId: 'docsSidebar',
+          position: 'left',
+          label: 'Docs'
+        },
         {to: '/blog', label: 'Blog', position: 'left'},
-        {to: '/profile', label: 'Profile', position: 'left'}
+        {
+          href: 'https://github.com/udzialMeansShare',
+          label: 'GitHub',
+          position: 'right'
+        }
       ]
     },
     footer: {
       style: 'dark',
-      copyright: `Copyright ${new Date().getFullYear()} Gaurav Khurana`
+      links: [
+        {
+          title: 'Docs',
+          items: [
+            {label: 'Welcome', to: '/'},
+            {label: 'Testing', to: '/testing/fundamentals'},
+            {label: 'Automation', to: '/automation/playwright'}
+          ]
+        },
+        {
+          title: 'More',
+          items: [
+            {label: 'Blog', to: '/blog'},
+            {label: 'GitHub', href: 'https://github.com/udzialMeansShare'}
+          ]
+        }
+      ],
+      copyright: `Copyright © ${new Date().getFullYear()} Gaurav Khurana. Built with Docusaurus.`
     }
   }
 };
