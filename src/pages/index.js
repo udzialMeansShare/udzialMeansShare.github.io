@@ -1,9 +1,11 @@
 import Link from '@docusaurus/Link';
+import Layout from '@theme/Layout';
 import React from 'react';
 import {profile} from '../data/profile';
 
 export default function Home() {
   return (
+    <Layout title={profile.name} description={profile.tagline}>
     <main className="page-main">
       <header className="hero">
         <div className="hero__backdrop" />
@@ -121,5 +123,6 @@ export default function Home() {
         </div>
       </section>
     </main>
+    </Layout>
   );
 }

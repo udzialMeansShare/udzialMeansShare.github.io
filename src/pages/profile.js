@@ -1,8 +1,10 @@
+import Layout from '@theme/Layout';
 import React from 'react';
 import {profile} from '../data/profile';
 
 export default function ProfilePage() {
   return (
+    <Layout title="Profile" description={profile.tagline}>
     <main className="page-main page-main--narrow">
       <section className="section section--intro">
         <div className="section__heading">
@@ -56,5 +58,6 @@ export default function ProfilePage() {
         </div>
       </section>
     </main>
+    </Layout>
   );
 }
